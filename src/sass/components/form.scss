@@ -1,0 +1,49 @@
+.form {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    border: 2px solid black;
+    height: 4rem;
+    border-radius: 3rem;
+    padding: 1rem;
+    font-size: 2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    border: 2px solid black;
+    height: 10rem;
+    padding: 1rem;
+    font-size: 2rem;
+    color: $color-black;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__submit {
+    align-self: flex-end;
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    border: 1px solid $color-primary;
+    padding: 1rem 2rem;
+
+    &:hover {
+      background: $color-primary;
+    }
+  }
+}
+
+::placeholder {
+  color: $color-black;
+  font-size: 2rem;
+}

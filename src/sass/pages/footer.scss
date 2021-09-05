@@ -1,0 +1,44 @@
+.footer {
+  padding: 2rem 2rem 10rem 2rem;
+  border-top: 2px solid $color-primary;
+  background: $color-black;
+
+  &__social {
+    display: flex;
+    display: flex;
+    justify-content: space-evenly;
+
+    &-icon {
+      font-size: 6rem;
+      background: $color-grey-dark-3;
+      color: white;
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__copyright {
+    padding: 2rem 0;
+    width: 100%;
+
+    &-contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      p {
+        margin: auto;
+      }
+    }
+    p {
+      text-align: center;
+      font-size: 2rem;
+      color: $color-grey-dark-2;
+    }
+  }
+}

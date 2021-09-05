@@ -1,0 +1,20 @@
+.logoList {
+  background: lighten($color-black, 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 2rem;
+}
+
+.logoCard {
+  width: 22rem;
+  padding: 1rem;
+  margin: 1rem;
+  background: $color-white;
+
+  img {
+    width: 20rem;
+  }
+}

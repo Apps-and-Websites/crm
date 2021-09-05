@@ -1,0 +1,38 @@
+@import url("//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css");
+button {
+  all: unset;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: red;
+  color: green;
+}
+
+a {
+  color: $color-white;
+}
+
+::selection {
+  color: $color-primary;
+  background: $color-white;
+}
+
+h2 {
+  overflow-wrap: break-word;
+}

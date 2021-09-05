@@ -1,0 +1,36 @@
+// abstracts
+
+@import "./abstract/variables.scss";
+@import "./abstract/mixins.scss";
+
+// base
+@import "./base/reset.scss";
+@import "./base/global.scss";
+
+// pages
+@import "./pages/home.scss";
+@import "./pages/projects.scss";
+@import "./pages/logos.scss";
+@import "./pages/contact.scss";
+@import "./pages/footer.scss";
+
+// theme
+// @import "./themes/switcher.scss";
+
+//components
+@import "./components/header.scss";
+@import "./components/bgVideo.scss";
+@import "./components/buttons.scss";
+@import "./components/navBar.scss";
+@import "./components/headings.scss";
+@import "./components/projectCard.scss";
+@import "./components/form.scss";
+
+// admin
+@import "./admin/adminGlobal.scss";
+@import "./admin/adminNav.scss";
+@import "./admin/projectList.scss";
+@import "./admin/addLogo.scss";
+@import "./admin/logoList.scss";
+@import "./admin/graphicList.scss";
+@import "./admin/dashboardAdmin.scss";

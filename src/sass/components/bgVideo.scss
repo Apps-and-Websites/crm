@@ -1,0 +1,16 @@
+.bgVideo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.35;
+
+  &__video {
+    height: 100%;
+
+    @include respond(tab-land) {
+      height: unset;
+      width: 100%;
+    }
+  }
+}

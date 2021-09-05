@@ -1,0 +1,11 @@
+.add-logo {
+  background-color: $color-black;
+  min-height: 500px;
+  color: $color-white;
+  padding: 5% 2% 2% 2%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

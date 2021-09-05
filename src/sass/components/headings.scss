@@ -1,0 +1,25 @@
+.heading-primary {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: $color-white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    content: "";
+    height: 2px;
+    width: 8rem;
+    position: relative;
+    margin-top: 1rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem 0;
+  color: $color-white;
+}
