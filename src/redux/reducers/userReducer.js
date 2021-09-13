@@ -1,5 +1,3 @@
-import storage from "local-storage-fallback";
-
 import { userInitialState } from "./initialState";
 import * as ActionTypes from "../actions/actionTypes";
 

@@ -1,14 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import PrivateRoute from "./utils/PrivateRoute";
-import Admin from "./components/Admin";
-import LoginForm from "./components/forms/loginForm";
-import * as UserActions from "./redux/actions/userActions";
+import Admin from "./Admin";
+import LoginForm from "./forms/loginForm";
+import * as UserActions from "../redux/actions/userActions";
 
-function App(props) {
+function DashboardAdmin(props) {
   return (
-    <PrivateRoute path="/">
+    <div>
       {props.token ? (
         <Admin />
       ) : (
@@ -16,7 +15,7 @@ function App(props) {
           <LoginForm userStart={props.userStart} loginUser={props.loginUser} />
         </div>
       )}
-    </PrivateRoute>
+    </div>
   );
 }
 
@@ -32,4 +31,4 @@ const mapDispatchToProps = {
   logoutUser: UserActions.logoutUser,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardAdmin);

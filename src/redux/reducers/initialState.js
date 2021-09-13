@@ -6,11 +6,18 @@ export const initialState = {
     : false,
 };
 
-export const projectInitialState = {
-  projects: [],
-  singleProject: {},
+export const websiteInitialState = {
+  websites: [],
+  singleWebsite: {},
   websiteStart: false,
   websiteErorr: "",
+};
+
+export const appInitialState = {
+  apps: [],
+  singleApp: {},
+  appStart: false,
+  appErorr: "",
 };
 
 export const logoInitialState = {

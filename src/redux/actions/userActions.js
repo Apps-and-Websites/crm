@@ -1,11 +1,11 @@
 import storage from "local-storage-fallback";
 import * as ActionTypes from "./actionTypes";
-import axiosWithAuth from "../../utils/axioswithAuth";
+import axiosWithoutAuth from "../../utils/axisoWithoutAuth";
 
 export const loginUser = (userInfo) => (dispatch) => {
   dispatch({ type: ActionTypes.USER_START });
 
-  return axiosWithAuth()
+  return axiosWithoutAuth()
     .post("/users/login", userInfo)
     .then((res) => {
       storage.setItem("token", res.data.token);

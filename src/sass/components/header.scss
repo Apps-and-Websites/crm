@@ -1,36 +1,40 @@
 .main-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  border-bottom: 5px solid $color-primary;
+}
 
-  &__top {
-    h1 {
-      font-size: 3rem;
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    font-size: 2rem;
+    background: $color-black;
+    color: $color-white;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    display: block;
+    width: 15rem;
+    text-align: center;
+
+    &:hover {
       background: $color-primary;
-      text-align: center;
-      padding: 1rem 0;
     }
   }
 
-  &__secondary {
-    background: lighten($color-primary, 45%);
-    padding: 1rem 0;
+  button {
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    color: $color-primary;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    @include respond(mobile) {
-      flex-direction: column;
-    }
-
-    img {
-      height: 90px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: darken($color-black, 30%);
+    &:hover {
+      background: $color-black;
     }
   }
 }

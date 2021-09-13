@@ -10,7 +10,7 @@ const PrivateRoute = ({ component: Component, token, ...theRest }) => {
         if (token) {
           return <Component {...props} />;
         } else {
-          return <Redirect to="/admin" />;
+          return <Redirect to="/" />;
         }
       }}
     />

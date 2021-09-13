@@ -2,17 +2,28 @@
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  max-width: 80rem;
+  margin: 0 auto;
 
   &__input {
-    border: 2px solid black;
+    align-self: stretch;
+    border: 1px solid black;
     height: 4rem;
-    border-radius: 3rem;
+    border-radius: 10px;
     padding: 1rem;
+    margin: 5px 0;
     font-size: 2rem;
 
     &:focus {
       outline: none;
     }
+  }
+
+  &__input-file {
+    margin-top: 5px;
+    font-size: 1.8rem;
   }
 
   &__textarea {

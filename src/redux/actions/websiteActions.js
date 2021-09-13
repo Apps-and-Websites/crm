@@ -2,45 +2,45 @@ import * as ActionTypes from "./actionTypes";
 import axiosWithAuth from "../../utils/axioswithAuth";
 
 export const getAllWebsites = () => (dispatch) => {
-  dispatch({ type: ActionTypes.WEBSITES_START });
+  dispatch({ type: ActionTypes.WEBSITE_START });
 
   axiosWithAuth()
     .get("/websites")
     .then((websiteList) => {
       dispatch({
-        type: ActionTypes.GET_PROJECTS_SUCCESS,
+        type: ActionTypes.GET_WEBSITES_SUCCESS,
         payload: websiteList.data,
       });
     })
     .catch((err) => {
       dispatch({
-        type: ActionTypes.WEBSITES_ERROR,
+        type: ActionTypes.WEBSITE_ERROR,
         payload: err,
       });
     });
 };
 
 export const getSingleWebsite = (id) => (dispatch) => {
-  dispatch({ type: ActionTypes.WEBSITES_START });
+  dispatch({ type: ActionTypes.WEBSITE_START });
 
   axiosWithAuth()
-    .get(`/website/${id}`)
+    .get(`/websites/${id}`)
     .then((project) => {
       dispatch({
-        type: ActionTypes.GET_SINGLE_PROJECTS_SUCCESS,
+        type: ActionTypes.GET_SINGLE_WEBSITE_SUCCESS,
         payload: project.data,
       });
     })
     .catch((err) => {
       dispatch({
-        type: ActionTypes.WEBSITES_ERROR,
+        type: ActionTypes.WEBSITE_ERROR,
         payload: err,
       });
     });
 };
 
 export const addWebsite = (project) => (dispatch) => {
-  dispatch({ type: ActionTypes.WEBSITES_START });
+  dispatch({ type: ActionTypes.WEBSITE_START });
 
   let newProjectData = {};
 
@@ -67,16 +67,16 @@ export const addWebsite = (project) => (dispatch) => {
   // };
 
   axiosWithAuth()
-    .post("/auth/website", newProjectData)
+    .post("/websites", newProjectData)
     .then((newProject) => {
       dispatch({
-        type: ActionTypes.ADD_PROJECT_SUCCESS,
+        type: ActionTypes.ADD_WEBSITE_SUCCESS,
         payload: newProject.data,
       });
     })
     .catch((err) => {
       dispatch({
-        type: ActionTypes.WEBSITES_ERROR,
+        type: ActionTypes.WEBSITE_ERROR,
         payload: err,
       });
     });
@@ -84,15 +84,15 @@ export const addWebsite = (project) => (dispatch) => {
 
 export const deleteWebsite = (id) => (dispatch) => {
   axiosWithAuth()
-    .delete(`/auth/website/${id}`)
+    .delete(`/websites/${id}`)
     .then((deleteProject) => {
       dispatch({
-        type: ActionTypes.DELETE_PROJECT_SUCCESS,
+        type: ActionTypes.DELETE_WEBSITE_SUCCESS,
         payload: deleteProject,
         id: id,
       });
     })
     .catch((err) =>
-      dispatch({ type: ActionTypes.WEBSITES_ERROR, payrload: err })
+      dispatch({ type: ActionTypes.WEBSITE_ERROR, payrload: err })
     );
 };

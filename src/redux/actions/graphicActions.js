@@ -19,7 +19,7 @@ export const addGraphic = (newGraphic) => (dispatch) => {
   }
 
   axiosWithAuth()
-    .post("/auth/graphics", newGraphicData)
+    .post("/graphics", newGraphicData)
     .then((addedGraphic) => {
       dispatch({
         type: ActionTypes.ADD_GRAPHIC_SUCCESS,
@@ -38,7 +38,7 @@ export const getAllGraphics = () => (dispatch) => {
   dispatch({ type: ActionTypes.GRAPHIC_START });
 
   axiosWithAuth()
-    .get("/auth/graphics")
+    .get("/graphics")
     .then((graphicList) => {
       dispatch({
         type: ActionTypes.GET_GRAPHIC_SUCCESS,
@@ -57,7 +57,7 @@ export const getSingleGraphic = (id) => (dispatch) => {
   dispatch({ type: ActionTypes.GRAPHIC_START });
 
   axiosWithAuth()
-    .get(`/auth/graphics/${id}`)
+    .get(`/graphics/${id}`)
     .then((graphic) => {
       dispatch({
         type: ActionTypes.GET_SINGLE_GRAPHIC_SUCCESS,
@@ -74,7 +74,7 @@ export const getSingleGraphic = (id) => (dispatch) => {
 
 export const deleteGraphic = (id) => (dispatch) => {
   axiosWithAuth()
-    .delete(`/auth/graphics/${id}`)
+    .delete(`/graphics/${id}`)
     .then((deleteGraphic) => {
       dispatch({
         type: ActionTypes.DELETE_GRAPHIC_SUCCESS,
